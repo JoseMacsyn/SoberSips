@@ -11,25 +11,74 @@
             padding: 0;
             background: #f4f4f9;
             display: flex;
-            justify-content: justify left;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
             color: #333;
         }
-        .welcome-container {
+
+        /* Header Section */
+        .header-container {
+            width: 100%;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
             text-align: center;
-            padding: 20px;
-            background: #fff;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: navy;
+        }
+
+        /* Subheading Section */
+        .subheading-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .subheading-container h2 {
+            font-size: 2rem;
+            color: #5c67f2; /* Lighter shade of blue */
+        }
+
+        /* Divider */
+        hr {
+            width: 80%;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        /* Content Section */
+        .content-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .content-container p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .content-container img {
+            max-width: 100%;
+            height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            color: #5c67f2;
+
+        /* Footer Section */
+        .footer-container {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background: #ffffff;
+            padding: 10px 0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        .button-container {
-            margin-top: 20px;
-        }
-        .button {
+
+        .footer-container .button {
             text-decoration: none;
             padding: 10px 20px;
             margin: 10px;
@@ -39,20 +88,38 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .button:hover {
+
+        .footer-container .button:hover {
             background: #4a55c3;
         }
     </style>
 </head>
 <body>
-    <div class="welcome-container">
-        <h1>Welcome To</h1>
-        <h1>SOBERSIPS</h1>
-        <p>Your journey starts here.</p>
-        <div class="button-container">
-            <a href="sign-up.html" class="button">Sign Up</a>
-            <a href="sign-in.html" class="button">Sign In</a>
-        </div>
+
+    <!-- Header -->
+    <div class="header-container">
+        <h1>Welcome</h1>
     </div>
+
+    <!-- Subheading -->
+    <div class="subheading-container">
+        <h2>SoberSips</h2>
+    </div>
+
+    <!-- Divider -->
+    <hr>
+
+    <!-- Content Section -->
+    <div class="content-container">
+        <p>Your journey starts here. Join a supportive community for sobriety.</p>
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+        <a href="sign-up.html" class="button">Sign Up</a>
+        <a href="sign-in.html" class="button">Sign In</a>
+    </div>
+
 </body>
 </html>
