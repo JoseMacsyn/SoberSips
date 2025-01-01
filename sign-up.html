@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Sobriety App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #5c67f2;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #5c67f2;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #4a55c3;
+        }
+        .checkbox-group {
+            margin: 10px 0;
+        }
+        .checkbox-group label {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create Your Profile</h2>
+        <form id="sign-up-form">
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            <div class="checkbox-group">
+                <input type="checkbox" id="location" name="location">
+                <label for="location">Allow access to location (optional)</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="save-data" name="save-data">
+                <label for="save-data">Allow saving data for better experience</label>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('sign-up-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const locationPermission = document.getElementById('location').checked;
+            const saveDataPermission = document.getElementById('save-data').checked;
+
+            // Simulating profile creation
+            console.log({
+                name,
+                email,
+                phone,
+                locationPermission,
+                saveDataPermission
+            });
+
+            alert('Your profile has been created successfully!');
+            window.location.href = 'profile.html'; // Redirect to profile page
+        });
+    </script>
+</body>
+</html>
